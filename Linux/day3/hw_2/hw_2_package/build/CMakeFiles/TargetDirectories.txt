@@ -1,0 +1,4 @@
+/home/bws/hw_2/build/CMakeFiles/hw_2.dir
+/home/bws/hw_2/build/CMakeFiles/edit_cache.dir
+/home/bws/hw_2/build/CMakeFiles/rebuild_cache.dir
+/home/bws/hw_2/build/CMakeFiles/hw_2_autogen.dir
