@@ -1,0 +1,6 @@
+Angle1: 0
+Angle2: 0
+Angle3: 0
+Direction1: 0
+Direction2: 1
+Direction3: 1
