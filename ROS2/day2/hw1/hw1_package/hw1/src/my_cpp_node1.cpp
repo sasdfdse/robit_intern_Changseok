@@ -13,12 +13,12 @@ MyNode1::MyNode1() : Node("mynode1")
 {
     publisher_ = this->create_publisher<std_msgs::msg::String>("topicname", 10);
     input_thread_ = std::thread(&MyNode1::input_thread_func, this);
-    input_thread_.detach(); // Detach the thread to run independently
+    input_thread_.detach(); 
 }
 
 MyNode1::~MyNode1()
 {
-    // If the thread is still joinable, join it before destruction
+    
     if (input_thread_.joinable()) {
         input_thread_.join();
     }
