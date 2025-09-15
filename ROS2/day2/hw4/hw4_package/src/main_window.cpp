@@ -21,7 +21,8 @@ MainWindow::~MainWindow()
   delete ui;
 }
 
-void MainWindow::updateJointAngles(const std::vector<double>& positions, const std::vector<std::string>& names)
+void MainWindow::updateJointAngles(const std::vector<double>& positions,
+const std::vector<std::string>& names)
 {
 
     for (size_t i = 0; i < names.size(); ++i)
