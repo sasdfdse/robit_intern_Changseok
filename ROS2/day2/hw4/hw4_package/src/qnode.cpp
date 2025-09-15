@@ -18,23 +18,6 @@ bool QNode::init() {
     rclcpp::init(init_argc, init_argv);
     node_ = std::make_shared<rclcpp::Node>("hw4_node");
 
-
-    auto joint_state_callback = 
-      [this](const sensor_msgs::msg::JointState::SharedPtr msg) -> void
-      {
-        if (msg->position.size() > 0 && msg->name.size() > 0)
-        {
-            Q_EMIT jointStateReceived(msg->position, msg->name);
-        }
-      };
-
-    auto subscription_options = rclcpp::SubscriptionOptions();
-    rclcpp::QoS qos(rclcpp::KeepLast(10));
-
-    joint_state_subscriber = node_->create_subscription<sensor_msgs::msg::JointState>(
-      "/joint_states", qos, joint_state_callback, subscription_options);
-
-
     auto command_callback =
       [this](const std_msgs::msg::String::SharedPtr msg) -> void
       {
