@@ -21,30 +21,6 @@ MainWindow::~MainWindow()
   delete ui;
 }
 
-void MainWindow::updateJointAngles(const std::vector<double>& positions,
-const std::vector<std::string>& names)
-{
-
-    for (size_t i = 0; i < names.size(); ++i)
-    {
-
-        int degree = static_cast<int>(positions[i] * 180.0 / M_PI);
-
-        if (names[i] == "joint1")
-        {
-            angle1 = qBound(0, degree, 360);
-        }
-        else if (names[i] == "joint2")
-        {
-            angle2 = qBound(0, degree, 360);
-        }
-        else if (names[i] == "joint3")
-        {
-            angle3 = qBound(0, degree, 360);
-        }
-    }
-    update();
-}
 
 void MainWindow::paintEvent(QPaintEvent* event)
 {
