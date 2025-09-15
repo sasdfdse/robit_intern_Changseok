@@ -9,7 +9,8 @@
 MyNode::MyNode() : Node("mynode")
 {
     
-  subscriber = this->create_subscription<std_msgs::msg::String>("topicname", 10, std::bind(&MyNode::topic_callback, this, std::placeholders::_1));
+  subscriber = this->create_subscription<std_msgs::msg::String>("topicname", 
+      10, std::bind(&MyNode::topic_callback, this, std::placeholders::_1));
      
 }
 
