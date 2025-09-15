@@ -7,12 +7,11 @@ MainWindow::MainWindow(std::shared_ptr<QNode> qnode, QWidget* parent)
   : QMainWindow(parent)
   , ui(new Ui::MainWindowDesign)
   , qnode_(qnode)
-{
-  ui->setupUi(this);
+{ ui->setupUi(this);
   log_text = ui->log_text;
-
-
+  
   QObject::connect(qnode_.get(), &QNode::log, this, &MainWindow::updateLog);
+  
   ui->centralwidget->setFocus();
   ui->centralwidget->setFocusPolicy(Qt::StrongFocus);
 
@@ -23,29 +22,19 @@ MainWindow::~MainWindow()
   delete ui;
 }
 
-
-
-
 void MainWindow::on_pushButton_clicked()
 {
    qnode_->drawSquare();
-
 }
 
 void MainWindow::on_pushButton_2_clicked()
 {
-
-
     qnode_->drawtriangle();
-
 }
 
 void MainWindow::on_pushButton_3_clicked()
 {
-
-
     qnode_->drawcircle();
-
 }
 
 void MainWindow::updateLog(const QString& message)
