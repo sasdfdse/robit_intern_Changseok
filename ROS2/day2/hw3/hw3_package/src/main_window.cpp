@@ -18,7 +18,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    static QVector<QString> queue_v;   // static이면 클릭할 때마다 누적 가능
+    static QVector<QString> queue_v;   
     queue_v.prepend(ui->lineEdit->text());
 
 
