@@ -1,6 +1,6 @@
 #include "../include/hw4/main_window.hpp"
 #include <QPainter>
-#include <cmath> // For M_PI
+#include <cmath> 
 
 MainWindow::MainWindow(QNode* qnode, QWidget* parent)
   : QMainWindow(parent)
@@ -29,17 +29,17 @@ void MainWindow::paintEvent(QPaintEvent* event)
     painter.setRenderHint(QPainter::Antialiasing);
 
     painter.save();
-    painter.translate(300, 300);  //팔1 시작점
+    painter.translate(300, 300); 
     painter.rotate(angle1);
-    painter.drawLine(0, 0, 100, 0);  // 팔 1
+    painter.drawLine(0, 0, 100, 0);  
 
-    painter.translate(100, 0);  // 팔 1끝으로 이동
+    painter.translate(100, 0);  
     painter.rotate(angle2);
-    painter.drawLine(0, 0, 80, 0);   // 팔 2
+    painter.drawLine(0, 0, 80, 0);   
 
-    painter.translate(80, 0);  // 팔 2끝으로 이동
+    painter.translate(80, 0);  
     painter.rotate(angle3);
-    painter.drawLine(0, 0, 60, 0);   // 팔 3
+    painter.drawLine(0, 0, 60, 0);  
 
     painter.restore();
 }
