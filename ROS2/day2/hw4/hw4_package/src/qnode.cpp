@@ -59,5 +59,5 @@ bool QNode::init() {
 
 void QNode::run() {
     rclcpp::spin(node_);
-    Q_EMIT rosShutDown(); // Used to signal the gui for a shutdown (useful to close window)
+    Q_EMIT rosShutDown(); 
 }
