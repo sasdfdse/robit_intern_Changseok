@@ -9,6 +9,7 @@ class MyNode : public rclcpp::Node
 {
 public:
     MyNode();
+ ~MyNode();
 
 private:
     rclcpp::Subscription<std_msgs::msg::String>::SharedPtr subscriber;
