@@ -28,7 +28,7 @@ public :
  rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_shutdown(const rclcpp_lifecycle::State &state); 
 
  private :
- void timer_callback(); //unconfigure 상태에서 inactive 상태로 변환  
+ void timer_callback(); 
 
  rclcpp::TimerBase::SharedPtr timer_; // 메세지를 퍼블리시하는데 필요한 timer 
  std::shared_ptr<rclcpp_lifecycle::LifecyclePublisher<std_msgs::msg::String>> publisher_; // 메세지를 퍼블리시하는 퍼블리셔,  활성화/비활성화 할 수 있는 publisher : LifecyclePublisher 타입
