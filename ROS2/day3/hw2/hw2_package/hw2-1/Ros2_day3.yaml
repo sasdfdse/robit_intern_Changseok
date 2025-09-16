@@ -1,0 +1,16 @@
+%YAML 1.2
+---
+launch:
+  - node:
+      pkg: "hw2_2"
+      exec: "myrclpy_node"
+      name: "node"
+      namespace: "python_node"
+
+  - node:
+      pkg: "hw4"
+      exec: "hw4_node"
+      name: "node"
+      namespace: "c_node"
+      parameters:
+        - $(find-pkg-share hw4)/config/params.yaml
