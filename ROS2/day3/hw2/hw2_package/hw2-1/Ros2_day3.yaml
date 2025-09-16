@@ -12,5 +12,4 @@ launch:
       exec: "hw4_node"
       name: "node"
       namespace: "c_node"
-      parameters:
-        - $(find-pkg-share hw4)/config/params.yaml
+      
