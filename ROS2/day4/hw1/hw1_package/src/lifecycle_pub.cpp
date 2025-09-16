@@ -45,7 +45,7 @@ rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn Minima
  }
 
 
-rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn MinimalPublisher::on_deactivate(const rclcpp_lifecycle::State &state) //unconfigure 상태에서 inactive 상태로 변환 
+rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn MinimalPublisher::on_deactivate(const rclcpp_lifecycle::State &state) //active 상태에서 inactive 상태로 변환 
 {
     publisher_ -> on_deactivate();  // active에서 inactive로 node의 상태를 변환// timer callback에서 publisher_를 통해 퍼블리시 해도 기능을 하지 못함
     RCUTILS_LOG_INFO_NAMED(this->get_name(), "on_deactivate() is called from state %s", state.label().c_str()); 
